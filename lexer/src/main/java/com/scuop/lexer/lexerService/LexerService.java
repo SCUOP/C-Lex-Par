@@ -1,11 +1,10 @@
 package com.scuop.lexer.lexerService;
 
 import java.io.BufferedReader;
-import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
+import java.io.FileReader;
 import java.io.IOException;
-import java.io.InputStreamReader;
 import java.io.PrintStream;
 import java.util.ArrayList;
 import java.util.List;
@@ -20,27 +19,24 @@ import com.scuop.lexer.tokenType.tokenEnum.OperatorType;
 
 public class LexerService {
 
-    private int buffLen = 0;
     private int lineNo = 1; // 当前行号
     private int linePos = 0; // 当前行所在字符号
     private StringBuffer buffer = new StringBuffer(); // 当前token缓冲区
-    private String lineBuffer; // 当前行缓冲区
+    private String lineBuffer = ""; // 当前行缓冲区
     private int lineIndex = 0; // 当前行索引
     private boolean isEof = false; // 是否扫描结束
     private boolean next = true; // 在output状态之后，需要通过这个状态量来确保能重新读入上一个仅仅用来判断“状态”但没读入缓冲区的变量
     private LexerState state = LexerState.START; // 当前状态
-    private String inputPath; // 输入路径
-    private String outputPath; // 输出路径
 
     public List<TokenBase> results = new ArrayList<>(); // 保存结果数组
-    public FileInputStream ifs;
+    public BufferedReader ifs;
     public FileOutputStream ofs;
     public boolean ifStdOutput = true; // 是否为标准输出
     public boolean outputRedirect = false; // 是否重定向输出至文件
 
     // 设置存取路径
     public void setPath(String i, String o) throws FileNotFoundException {
-        ifs = new FileInputStream(i);
+        ifs = new BufferedReader(new FileReader(i));
         if (o != null && !o.isEmpty()) {
             outputRedirect = true;
             ofs = new FileOutputStream(o);
@@ -195,15 +191,13 @@ public class LexerService {
         return getNextToken(ifs);
     }
 
-    public TokenBase getNextToken(FileInputStream localIfs) throws IOException {
-        BufferedReader ifs = new BufferedReader(new InputStreamReader(localIfs));
+    public TokenBase getNextToken(BufferedReader localIfs) throws IOException {
         do {
             if (isEof)
                 return null;
             else {
                 if (lineIndex >= lineBuffer.length()) {
-                    lineBuffer = ifs.readLine();
-                    if (lineBuffer == null) {
+                    if ((lineBuffer = localIfs.readLine()) == null) {
                         isEof = true;
                     }
                     lineIndex = 0;
@@ -216,8 +210,7 @@ public class LexerService {
                 if (errState()) {
                     System.out.println("ERROR :" + LexerState.getErrString(state));
                     lineBuffer = lineBuffer.replace('\t', ' ');
-                    // TODO: 可能会有问题
-                    System.out.println(" " + lineBuffer);
+                    System.out.print(" " + lineBuffer);
                     System.out.println(" " + " ".repeat(getLinePos() - 1) + "^");
                     System.out.println("In the line " + getLineNo() + ", position " + getLinePos());
                     System.out.println();
@@ -234,8 +227,9 @@ public class LexerService {
     }
 
     // 从输入流解析整个文件的函数
-    public void lexingFile(FileInputStream ifstream) throws IOException {
+    public void lexingFile(BufferedReader ifstream) throws IOException {
         TokenBase res;
+        System.out.println("line" + "\t" + "pos" + "\t" + "tokenType" + "\t" + "word");
         while ((res = getNextToken()) != null) {
             if (ifStdOutput) {
                 System.out.println("#" + res.getLine() + "\t" + res.getPos() + "\t" + res.toString());

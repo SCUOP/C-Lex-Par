@@ -2,7 +2,6 @@ package com.scuop.lexer;
 
 import java.io.BufferedReader;
 import java.io.IOException;
-import java.io.InputStreamReader;
 import java.io.StringReader;
 
 import org.junit.jupiter.api.Test;
@@ -18,24 +17,28 @@ public class LexerTest {
         boolean next = true;
         LexerService lexerService = new LexerService();
         String a;
-        // TODO: ==和!=有问题
         BufferedReader ifs = new BufferedReader(new StringReader("""
-            int gcd (int u, int v)
-            { 
-                if (v == 0)
-                    return u ;
-                else
-                    return gcd(v,u-u/v*v);
-            }
-            
-            void main(void)
-            {
-                int x; int y;
-                x = input();
-                y = input();
-                output(gcd(x,y));
-            }
-            """));
+                /* A program to perform Euclid's
+                Algorithm to compute gcd. */
+                int gcd (int u, int v)
+                {
+                    if (v == 0)
+                        return u ;
+                    else
+                        return gcd(v,u-u/v*v);
+                    /* u-u/v*v ==
+                    u mod v */
+                }
+
+                void main(void)
+                {
+                    int x; int y;
+                    x = input();
+                    y = input();
+                    output(gcd(x,y));
+                }
+                """));
+        System.out.println("line" + "\t" + "pos" + "\t" + "tokenType" + "\t" + "word");
         while ((a = ifs.readLine()) != null) {
             a += "\n";
             for (int i = 0; i < a.length();) {
@@ -51,7 +54,6 @@ public class LexerTest {
                 }
                 i++;
             }
-            a = ifs.readLine();
         }
     }
 }
