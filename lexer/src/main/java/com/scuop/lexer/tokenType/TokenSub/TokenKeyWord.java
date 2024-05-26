@@ -15,6 +15,10 @@ public class TokenKeyWord extends TokenBase {
         keywordType = t;
     }
 
+    public KeywordType getKeywordType() {
+        return keywordType;
+    }
+
     @Override
     public TokenType getTokenType() {
         return TokenType.KEYWORD;

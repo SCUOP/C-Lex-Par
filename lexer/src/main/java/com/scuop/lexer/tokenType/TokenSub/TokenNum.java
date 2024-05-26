@@ -13,6 +13,10 @@ public class TokenNum extends TokenBase {
         number = num;
     }
 
+    public String getNumber() {
+        return number;
+    }
+
     @Override
     public TokenType getTokenType() {
         return TokenType.NUM;

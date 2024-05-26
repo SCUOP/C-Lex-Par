@@ -14,6 +14,10 @@ public class TokenOperator extends TokenBase {
         operatorType = t;
     }
 
+    public OperatorType getOperatorType() {
+        return operatorType;
+    }
+
     @Override
     public TokenType getTokenType() {
         return TokenType.OPERATOR;

@@ -12,6 +12,10 @@ public class TokenIdentifier extends TokenBase{
         identifier = id;
     }
 
+    public String getIdentifier() {
+        return identifier;
+    }
+
     @Override
     public TokenType getTokenType() {
         return TokenType.ID;
