@@ -1,0 +1,895 @@
+Keyword:    	int
+program
+declaration
+Identifier:    	x
+Operator:    	[
+var_declaration
+Number:    	10
+Operator:    	]
+Operator:    	;
+Keyword:    	int
+declaration
+Identifier:    	minloc
+Operator:    	(
+fun_declaration
+Keyword:    	int
+params
+param_list
+param
+Identifier:    	a
+Operator:    	[
+Operator:    	]
+Operator:    	,
+Keyword:    	int
+param
+Identifier:    	low
+Operator:    	,
+Keyword:    	int
+param
+Identifier:    	high
+Operator:    	)
+Operator:    	{
+compound-stmt
+Keyword:    	int
+local_declarations
+var_declaration
+Identifier:    	i
+Operator:    	;
+Keyword:    	int
+var_declaration
+Identifier:    	x
+Operator:    	;
+Keyword:    	int
+var_declaration
+Identifier:    	k
+Operator:    	;
+Identifier:    	k
+statement_list
+statement
+expression_stmt
+expression
+var
+Operator:    	=
+Identifier:    	low
+expression
+var
+Operator:    	;
+simple_expression
+additive_expression
+term
+factor
+Identifier:    	x
+statement
+expression_stmt
+expression
+var
+Operator:    	=
+Identifier:    	a
+expression
+var
+Operator:    	[
+Identifier:    	low
+expression
+var
+Operator:    	]
+simple_expression
+additive_expression
+term
+factor
+Operator:    	;
+simple_expression
+additive_expression
+term
+factor
+Identifier:    	i
+statement
+expression_stmt
+expression
+var
+Operator:    	=
+Identifier:    	low
+expression
+var
+Operator:    	+
+simple_expression
+additive_expression
+term
+factor
+Number:    	1
+term
+factor
+Operator:    	;
+Keyword:    	while
+statement
+iteration_stmt
+Operator:    	(
+Identifier:    	i
+expression
+var
+Operator:    	<
+simple_expression
+additive_expression
+term
+factor
+Identifier:    	high
+additive_expression
+term
+factor
+var
+Operator:    	)
+Operator:    	{
+statement
+compound-stmt
+Keyword:    	if
+local_declarations
+statement_list
+statement
+selection_stmt
+Operator:    	(
+Identifier:    	a
+expression
+var
+Operator:    	[
+Identifier:    	i
+expression
+var
+Operator:    	]
+simple_expression
+additive_expression
+term
+factor
+Operator:    	<
+simple_expression
+additive_expression
+term
+factor
+Identifier:    	x
+additive_expression
+term
+factor
+var
+Operator:    	)
+Operator:    	{
+statement
+compound-stmt
+Identifier:    	x
+local_declarations
+statement_list
+statement
+expression_stmt
+expression
+var
+Operator:    	=
+Identifier:    	a
+expression
+var
+Operator:    	[
+Identifier:    	i
+expression
+var
+Operator:    	]
+simple_expression
+additive_expression
+term
+factor
+Operator:    	;
+simple_expression
+additive_expression
+term
+factor
+Identifier:    	k
+statement
+expression_stmt
+expression
+var
+Operator:    	=
+Identifier:    	i
+expression
+var
+Operator:    	;
+simple_expression
+additive_expression
+term
+factor
+Operator:    	}
+Identifier:    	i
+statement
+expression_stmt
+expression
+var
+Operator:    	=
+Identifier:    	i
+expression
+var
+Operator:    	+
+simple_expression
+additive_expression
+term
+factor
+Number:    	1
+term
+factor
+Operator:    	;
+Operator:    	}
+Keyword:    	return
+statement
+return_stmt
+Identifier:    	k
+expression
+var
+Operator:    	;
+simple_expression
+additive_expression
+term
+factor
+Operator:    	}
+Keyword:    	void
+declaration
+Identifier:    	sort
+Operator:    	(
+fun_declaration
+Keyword:    	int
+params
+param_list
+param
+Identifier:    	a
+Operator:    	[
+Operator:    	]
+Operator:    	,
+Keyword:    	int
+param
+Identifier:    	low
+Operator:    	,
+Keyword:    	int
+param
+Identifier:    	high
+Operator:    	)
+Operator:    	{
+compound-stmt
+Keyword:    	int
+local_declarations
+var_declaration
+Identifier:    	i
+Operator:    	;
+Keyword:    	int
+var_declaration
+Identifier:    	k
+Operator:    	;
+Identifier:    	i
+statement_list
+statement
+expression_stmt
+expression
+var
+Operator:    	=
+Identifier:    	low
+expression
+var
+Operator:    	;
+simple_expression
+additive_expression
+term
+factor
+Keyword:    	while
+statement
+iteration_stmt
+Operator:    	(
+Identifier:    	i
+expression
+var
+Operator:    	<
+simple_expression
+additive_expression
+term
+factor
+Identifier:    	high
+additive_expression
+term
+factor
+var
+Operator:    	-
+Number:    	1
+term
+factor
+Operator:    	)
+Operator:    	{
+statement
+compound-stmt
+Keyword:    	int
+local_declarations
+var_declaration
+Identifier:    	t
+Operator:    	;
+Identifier:    	k
+statement_list
+statement
+expression_stmt
+expression
+var
+Operator:    	=
+Identifier:    	minloc
+expression
+var
+Operator:    	(
+simple_expression
+additive_expression
+term
+factor
+call
+Identifier:    	a
+arg_list
+expression
+var
+Operator:    	,
+simple_expression
+additive_expression
+term
+factor
+Identifier:    	i
+expression
+var
+Operator:    	,
+simple_expression
+additive_expression
+term
+factor
+Identifier:    	high
+expression
+var
+Operator:    	)
+simple_expression
+additive_expression
+term
+factor
+Operator:    	;
+Identifier:    	t
+statement
+expression_stmt
+expression
+var
+Operator:    	=
+Identifier:    	a
+expression
+var
+Operator:    	[
+Identifier:    	k
+expression
+var
+Operator:    	]
+simple_expression
+additive_expression
+term
+factor
+Operator:    	;
+simple_expression
+additive_expression
+term
+factor
+Identifier:    	a
+statement
+expression_stmt
+expression
+var
+Operator:    	[
+Identifier:    	k
+expression
+var
+Operator:    	]
+simple_expression
+additive_expression
+term
+factor
+Operator:    	=
+Identifier:    	a
+expression
+var
+Operator:    	[
+Identifier:    	i
+expression
+var
+Operator:    	]
+simple_expression
+additive_expression
+term
+factor
+Operator:    	;
+simple_expression
+additive_expression
+term
+factor
+Identifier:    	a
+statement
+expression_stmt
+expression
+var
+Operator:    	[
+Identifier:    	i
+expression
+var
+Operator:    	]
+simple_expression
+additive_expression
+term
+factor
+Operator:    	=
+Identifier:    	t
+expression
+var
+Operator:    	;
+simple_expression
+additive_expression
+term
+factor
+Identifier:    	i
+statement
+expression_stmt
+expression
+var
+Operator:    	=
+Identifier:    	i
+expression
+var
+Operator:    	+
+simple_expression
+additive_expression
+term
+factor
+Number:    	1
+term
+factor
+Operator:    	;
+Operator:    	}
+Operator:    	}
+Keyword:    	void
+declaration
+Identifier:    	main
+Operator:    	(
+fun_declaration
+Keyword:    	void
+params
+Operator:    	)
+Operator:    	{
+compound-stmt
+Keyword:    	int
+local_declarations
+var_declaration
+Identifier:    	i
+Operator:    	;
+Identifier:    	i
+statement_list
+statement
+expression_stmt
+expression
+var
+Operator:    	=
+Number:    	0
+expression
+var
+simple_expression
+additive_expression
+term
+factor
+Operator:    	;
+Keyword:    	while
+statement
+iteration_stmt
+Operator:    	(
+Identifier:    	i
+expression
+var
+Operator:    	<
+simple_expression
+additive_expression
+term
+factor
+Number:    	10
+additive_expression
+term
+factor
+Operator:    	)
+Operator:    	{
+statement
+compound-stmt
+Identifier:    	x
+local_declarations
+statement_list
+statement
+expression_stmt
+expression
+var
+Operator:    	[
+Identifier:    	i
+expression
+var
+Operator:    	]
+simple_expression
+additive_expression
+term
+factor
+Operator:    	=
+Identifier:    	input
+expression
+var
+Operator:    	(
+simple_expression
+additive_expression
+term
+factor
+call
+Operator:    	)
+Operator:    	;
+Identifier:    	i
+statement
+expression_stmt
+expression
+var
+Operator:    	=
+Identifier:    	i
+expression
+var
+Operator:    	+
+simple_expression
+additive_expression
+term
+factor
+Number:    	1
+term
+factor
+Operator:    	;
+Identifier:    	sort
+statement
+expression_stmt
+expression
+var
+Operator:    	(
+simple_expression
+additive_expression
+term
+factor
+call
+Identifier:    	x
+arg_list
+expression
+var
+Operator:    	,
+simple_expression
+additive_expression
+term
+factor
+Number:    	0
+expression
+var
+simple_expression
+additive_expression
+term
+factor
+Operator:    	,
+Number:    	10
+expression
+var
+simple_expression
+additive_expression
+term
+factor
+Operator:    	)
+Operator:    	;
+Identifier:    	i
+statement
+expression_stmt
+expression
+var
+Operator:    	=
+Number:    	0
+expression
+var
+simple_expression
+additive_expression
+term
+factor
+Operator:    	;
+Keyword:    	while
+statement
+iteration_stmt
+Operator:    	(
+Identifier:    	i
+expression
+var
+Operator:    	<
+simple_expression
+additive_expression
+term
+factor
+Number:    	10
+additive_expression
+term
+factor
+Operator:    	)
+Operator:    	{
+statement
+compound-stmt
+Identifier:    	output
+local_declarations
+statement_list
+statement
+expression_stmt
+expression
+var
+Operator:    	(
+simple_expression
+additive_expression
+term
+factor
+call
+Identifier:    	x
+arg_list
+expression
+var
+Operator:    	[
+Identifier:    	i
+expression
+var
+Operator:    	]
+simple_expression
+additive_expression
+term
+factor
+Operator:    	)
+simple_expression
+additive_expression
+term
+factor
+Operator:    	;
+Identifier:    	i
+statement
+expression_stmt
+expression
+var
+Operator:    	=
+Identifier:    	i
+expression
+var
+Operator:    	+
+simple_expression
+additive_expression
+term
+factor
+Number:    	1
+term
+factor
+Operator:    	;
+Operator:    	}
+Operator:    	}
+Operator:    	}
+----FINISH PARSING----
+<Program> (1)
+ <Declaration_list> (1)
+  <Declaration> (1)
+   <Var_declaration> (1)
+    <Type_identifier : INT> (1)
+    <Identifier : x> (1)
+    <NUM : 10> (1)
+  <Declaration> (2)
+   <Fun_declaration> (2)
+    <Type_identifier : INT> (2)
+    <Identifier : minloc> (2)
+    <Param_array> (2)
+     <Type_identifier : INT> (2)
+     <Identifier : a> (2)
+    <Param> (2)
+     <Type_identifier : INT> (2)
+     <Identifier : low> (2)
+    <Param> (2)
+     <Type_identifier : INT> (2)
+     <Identifier : high> (2)
+    <Compound_stmt> (3)
+     <Var_declaration> (4)
+      <Type_identifier : INT> (4)
+     <Var_declaration> (5)
+      <Type_identifier : INT> (5)
+     <Var_declaration> (6)
+      <Type_identifier : INT> (6)
+     <Assign: = > (7)
+      <Var> (7)
+       <Identifier : k> (7)
+      <Var> (7)
+       <Identifier : low> (7)
+     <Assign: = > (8)
+      <Var> (8)
+       <Identifier : x> (8)
+      <Array_var> (8)
+       <Identifier : a> (8)
+       <Var> (8)
+        <Identifier : low> (8)
+     <Assign: = > (9)
+      <Var> (9)
+       <Identifier : i> (9)
+      <Operator : +> (9)
+       <Var> (9)
+        <Identifier : low> (9)
+       <NUM : 1> (9)
+     <Iteration_stmt> (10)
+      <Operator : <> (10)
+       <Var> (10)
+        <Identifier : i> (10)
+       <Var> (10)
+        <Identifier : high> (10)
+      <Compound_stmt> (11)
+       <Selection_stmt> (12)
+        <Operator : <> (12)
+         <Array_var> (12)
+          <Identifier : a> (12)
+          <Var> (12)
+           <Identifier : i> (12)
+         <Var> (12)
+          <Identifier : x> (12)
+        <Compound_stmt> (13)
+         <Assign: = > (14)
+          <Var> (14)
+           <Identifier : x> (14)
+          <Array_var> (14)
+           <Identifier : a> (14)
+           <Var> (14)
+            <Identifier : i> (14)
+         <Assign: = > (15)
+          <Var> (15)
+           <Identifier : k> (15)
+          <Var> (15)
+           <Identifier : i> (15)
+       <Assign: = > (17)
+        <Var> (17)
+         <Identifier : i> (17)
+        <Operator : +> (17)
+         <Var> (17)
+          <Identifier : i> (17)
+         <NUM : 1> (17)
+     <Return_stmt> (19)
+      <Var> (19)
+       <Identifier : k> (19)
+  <Declaration> (21)
+   <Fun_declaration> (21)
+    <Type_identifier : VOID> (21)
+    <Identifier : sort> (21)
+    <Param_array> (21)
+     <Type_identifier : INT> (21)
+     <Identifier : a> (21)
+    <Param> (21)
+     <Type_identifier : INT> (21)
+     <Identifier : low> (21)
+    <Param> (21)
+     <Type_identifier : INT> (21)
+     <Identifier : high> (21)
+    <Compound_stmt> (22)
+     <Var_declaration> (23)
+      <Type_identifier : INT> (23)
+     <Var_declaration> (24)
+      <Type_identifier : INT> (24)
+     <Assign: = > (25)
+      <Var> (25)
+       <Identifier : i> (25)
+      <Var> (25)
+       <Identifier : low> (25)
+     <Iteration_stmt> (26)
+      <Operator : <> (26)
+       <Var> (26)
+        <Identifier : i> (26)
+       <Operator : -> (26)
+        <Var> (26)
+         <Identifier : high> (26)
+        <NUM : 1> (26)
+      <Compound_stmt> (27)
+       <Var_declaration> (28)
+        <Type_identifier : INT> (28)
+       <Assign: = > (29)
+        <Var> (29)
+         <Identifier : k> (29)
+        <Call> (29)
+         <Var> (29)
+          <Identifier : minloc> (29)
+         <Args> (29)
+          <Var> (29)
+           <Identifier : a> (29)
+         <Args : ,> (29)
+          <Var> (29)
+           <Identifier : i> (29)
+         <Args : ,> (29)
+          <Var> (29)
+           <Identifier : high> (29)
+       <Assign: = > (30)
+        <Var> (30)
+         <Identifier : t> (30)
+        <Array_var> (30)
+         <Identifier : a> (30)
+         <Var> (30)
+          <Identifier : k> (30)
+       <Assign: = > (31)
+        <Array_var> (31)
+         <Identifier : a> (31)
+         <Var> (31)
+          <Identifier : k> (31)
+        <Array_var> (31)
+         <Identifier : a> (31)
+         <Var> (31)
+          <Identifier : i> (31)
+       <Assign: = > (32)
+        <Array_var> (32)
+         <Identifier : a> (32)
+         <Var> (32)
+          <Identifier : i> (32)
+        <Var> (32)
+         <Identifier : t> (32)
+       <Assign: = > (33)
+        <Var> (33)
+         <Identifier : i> (33)
+        <Operator : +> (33)
+         <Var> (33)
+          <Identifier : i> (33)
+         <NUM : 1> (33)
+  <Declaration> (36)
+   <Fun_declaration> (36)
+    <Type_identifier : VOID> (36)
+    <Identifier : main> (36)
+    <Type_identifier : VOID> (36)
+    <Compound_stmt> (37)
+     <Var_declaration> (38)
+      <Type_identifier : INT> (38)
+     <Assign: = > (39)
+      <Var> (39)
+       <Identifier : i> (39)
+      <NUM : 0> (39)
+     <Iteration_stmt> (40)
+      <Operator : <> (40)
+       <Var> (40)
+        <Identifier : i> (40)
+       <NUM : 10> (40)
+      <Compound_stmt> (41)
+       <Assign: = > (42)
+        <Array_var> (42)
+         <Identifier : x> (42)
+         <Var> (42)
+          <Identifier : i> (42)
+        <Call> (42)
+         <Var> (42)
+          <Identifier : input> (42)
+         <Empty> (42)
+       <Assign: = > (43)
+        <Var> (43)
+         <Identifier : i> (43)
+        <Operator : +> (43)
+         <Var> (43)
+          <Identifier : i> (43)
+         <NUM : 1> (43)
+       <Call> (44)
+        <Var> (44)
+         <Identifier : sort> (44)
+        <Args> (44)
+         <Var> (44)
+          <Identifier : x> (44)
+        <Args : ,> (44)
+         <NUM : 0> (44)
+        <Args : ,> (44)
+         <NUM : 10> (44)
+       <Assign: = > (45)
+        <Var> (45)
+         <Identifier : i> (45)
+        <NUM : 0> (45)
+       <Iteration_stmt> (46)
+        <Operator : <> (46)
+         <Var> (46)
+          <Identifier : i> (46)
+         <NUM : 10> (46)
+        <Compound_stmt> (47)
+         <Call> (48)
+          <Var> (48)
+           <Identifier : output> (48)
+          <Args> (48)
+           <Array_var> (48)
+            <Identifier : x> (48)
+            <Var> (48)
+             <Identifier : i> (48)
+         <Assign: = > (49)
+          <Var> (49)
+           <Identifier : i> (49)
+          <Operator : +> (49)
+           <Var> (49)
+            <Identifier : i> (49)
+           <NUM : 1> (49)
